@@ -42,7 +42,7 @@ open class SideMenuController: UIViewController {
 
     /// Caching
     private lazy var lazyCachedViewControllerGenerators: [String: () -> UIViewController?] = [:]
-    private lazy var lazyCachedViewControllers: [String: UIViewController] = [:]
+    lazy var lazyCachedViewControllers: [String: UIViewController] = [:] // Krishna Kishore: removed as private as we require instance of seleted viewcontroller
 
     /// The side menu controller's delegate object.
     public weak var delegate: SideMenuControllerDelegate?
